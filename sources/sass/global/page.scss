@@ -1,0 +1,32 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    @include reset;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: $grey;
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+
+    clip: rect(0, 0, 0, 0);
+}
