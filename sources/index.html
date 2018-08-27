@@ -13,7 +13,41 @@
         <div style="display:none">
             <include src="sources/img/sprite.svg"></include>
         </div>
-        
+        <div class="page-wrapper">
+            <header class="page-header">
+                <a class="page-header__logo" href="#">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="img/logo-sedona-desktop.svg">
+                        <source media="(min-width:768px)" srcset="img/logo-sedona-tablet.svg">
+                        <img class="page-header__image" src="img/logo-sedona-mobile.svg" alt="Логотип">
+                    </picture>
+                </a>
+
+                <nav class="main-nav">
+                    <div class="main-nav__wrapper">
+                        <button class="main-nav__toggle" type="button">
+                            <span class="main-nav__burger-icon main-nav__burger-icon--top"></span>
+                            <span class="main-nav__burger-icon main-nav__burger-icon--middle"></span>
+                            <span class="main-nav__burger-icon main-nav__burger-icon--bottom"></span>
+                        </button>
+                    </div>
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item main-nav__item--active">
+                            <a class="main-nav__link" href="#">Главная</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="#">Фото и видео</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="#">Форма отзыва</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
         <script src="js/index.js"></script>
     </body>
 </html>

@@ -96,11 +96,13 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
     gulp.src(src.js.global)
+    .pipe(plumber())
     .pipe(concat('global.js'))
     .pipe(uglify())
     .pipe(gulp.dest(dest.js));
 
     gulp.src(src.js.index)
+    .pipe(plumber())
     .pipe(sourcemaps.init())
         .pipe(concat('index.js'))
         .pipe(uglify())
@@ -108,6 +110,7 @@ gulp.task('js', function() {
     .pipe(gulp.dest(dest.js));
 
     gulp.src(src.js.foto)
+    .pipe(plumber())
     .pipe(sourcemaps.init())
         .pipe(concat('foto.js'))
         .pipe(uglify())
@@ -115,6 +118,7 @@ gulp.task('js', function() {
     .pipe(gulp.dest(dest.js));
 
     gulp.src(src.js.form)
+    .pipe(plumber())
     .pipe(sourcemaps.init())
         .pipe(concat('form.js'))
         .pipe(uglify())
@@ -163,9 +167,8 @@ gulp.task('default', ['build'], function() {
         notify: false,
     });
 
-    gulp.watch('sources/sass/**/*.scss', ['css']);    
+    gulp.watch('sources/sass/**/*.scss', ['css']);
     gulp.watch('sources/**/*.html', ['html']);
     gulp.watch('sources/js/**/*.js', ['js'])
         .on('change', server.reload);
-    gulp.watch('sources/img/**/*.{jpg,png,svg}',['img']);
 });

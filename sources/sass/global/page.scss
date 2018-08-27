@@ -8,11 +8,14 @@ html {
 
 body {
     @include reset;
+
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     color: $grey;
     font-weight: 400;
+
+    background-color: $ligth-grey;
 }
 
 img {
@@ -29,4 +32,12 @@ img {
     margin: -1px;
 
     clip: rect(0, 0, 0, 0);
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background-color: $white;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4)
 }
